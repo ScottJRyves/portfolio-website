@@ -1,0 +1,43 @@
+---
+const skillGroups = [
+  {
+    title: "Data Analysis",
+    skills: ["Python", "SQL", "Tableau Prep Builder", "Tableau Cloud"],
+  },
+  {
+    title: "Machine Learning",
+    skills: [
+      "scikit-learn",
+      "pandas",
+      "Data Preprocessing",
+      "Model Evaluation",
+      "NLP",
+    ],
+  },
+  {
+    title: "Development",
+    skills: ["Flask", "C#", ".NET", "PHP", "HTML", "CSS"],
+  },
+];
+---
+
+<section id="skills" class="section alt-section">
+  <div class="container">
+    <p class="section-label">Skills</p>
+    <h2>Technical experience</h2>
+
+    <div class="skills-grid">
+      {
+        skillGroups.map((group) => (
+          <article class="skill-card">
+            <h3>{group.title}</h3>
+
+            <ul class="tag-list">
+              {group.skills.map((skill) => <li>{skill}</li>)}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
